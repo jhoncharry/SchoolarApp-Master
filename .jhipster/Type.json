@@ -1,0 +1,46 @@
+{
+    "name": "Type",
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "value",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parent",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "State",
+            "fieldValues": "NUEVO,ANTIGUO,PENDIENTE,ACEPTADO,ACTIVO,INACTIVO"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "reference",
+            "otherEntityRelationshipName": "type",
+            "relationshipName": "reference",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20210227002400",
+    "entityTableName": "type",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

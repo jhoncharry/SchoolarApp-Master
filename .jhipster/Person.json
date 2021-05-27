@@ -1,0 +1,173 @@
+{
+    "name": "Person",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "surname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "documentId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "documentExpDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephonNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthdate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "district",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stratus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "disease",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "disability",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "stateCivil",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ocupation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parent",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "State",
+            "fieldValues": "NUEVO,ANTIGUO,PENDIENTE,ACEPTADO,ACTIVO,INACTIVO"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "enrollment",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "enrollment"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "course"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "typeId",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "gender",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "neighborhood",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "city",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "birthplace",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "nacionality",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "cityExp",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "rh",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "eps",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "type",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "relation",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "courses",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20210227002300",
+    "entityTableName": "person",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
